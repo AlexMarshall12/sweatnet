@@ -1,0 +1,126 @@
+body {
+	font-family: Open Sans;
+}
+ul {
+	list-style: none;
+}
+
+.main-wrapper {
+	display:grid;
+	grid-template-columns: 5% 1fr 5%;
+        height:150vh;
+	grid-template-rows: 5% 20vh 2em ;
+}
+.main-wrapper .Header {
+	display: flex;
+        grid-column: 2/3;
+        grid-row:0/0;
+	flex-direction: row;
+        padding:10px;
+	width:100%;
+}
+
+.main-wrapper .Description {
+	grid-column: 2/3;
+	grid-row:2/3; 
+        font-size:30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+}
+.main-wrapper .Description .signup {
+align-self: flex-end;
+margin-bottom:5px;
+}
+.main-wrapper .Description .signup > button {
+        background-color: #33C3F0;
+        border-color: #33C3F0;
+        height: 70px;
+	width:130px;
+        cursor:pointer;
+        white-space:nowrap;
+        border-radius:10px;
+        border: 1px solid #bbb;
+}
+a {
+	text-decoration:none;
+	font-size:medium;
+	color:#fff;
+}
+.main-wrapper .Grey-Stripe {
+        z-index:-1;
+        grid-column:1/4;
+        grid-row:2/3;
+        background: #bababa;
+}
+.main-wrapper .Summarize {
+	grid-row:6/7;
+	grid-column: 2/3;
+	padding:0.1em;
+        text-align:center;
+        margin-top:2px;
+}
+.main-wrapper .Benefits {
+        justify-content:center;
+        align-items:center;
+        grid-column:2/3;
+        grid-row:4/5;
+       }
+.main-wrapper .Benefits > * {
+        padding:5px;
+}
+.main-wrapper .screenshots{
+	padding:2%;
+        grid-column:2/3;
+        grid-row:5/6;
+}
+.Benefits{
+        display:flex;
+        flex-direction: row;
+}
+.Benefits >* 
+{ margin: 0 5px; } 
+.subscribe-input{
+	font-size:1em;
+}
+.subscribe-submit{
+	font-size:1em;
+}
+.screenshots > * > img {
+   height:90vh;
+}
+
+.benefit:hover {
+  background: #bababa;
+  cursor: pointer;
+
+}
+
+.screenshot{
+  display:none;
+  text-align:center;
+}
+
+.screenshot.active{
+  display:block;
+}
+.benefit.active {
+  background: #bababa;
+}
+#Signup{
+grid-column:1/5;
+z-index:-1;
+grid-row:6/7;
+background: linear-gradient(to top,#bbb,white); 
+text-align:left;
+display:flex;
+align-self:flex-end;
+padding:20%;
+}
+#Info{
+}
+.comments{
+width: 300px;
+  height: 80px;
+  text-align:start;
+}
