@@ -9,7 +9,7 @@ ul {
 	display:grid;
 	grid-template-columns: 5% 1fr 5%;
         height:150vh;
-	grid-template-rows: 5% 20vh 2em ;
+	grid-template-rows: 5% 20vh 3vh 1fr 1fr 1fr 1fr;
 }
 .main-wrapper .Header {
 	display: flex;
@@ -23,17 +23,17 @@ ul {
 .main-wrapper .Description {
 	grid-column: 2/3;
 	grid-row:2/3; 
-        font-size:30px;
+        font-size:2.5vh;
         display:flex;
         justify-content:center;
         align-items:center;
 }
 .main-wrapper .Description .signup {
 align-self: flex-end;
-margin-bottom:5px;
 }
 .main-wrapper .Description .signup > button {
         background-color: #33C3F0;
+        margin-bottom:20px;
         border-color: #33C3F0;
         height: 70px;
 	width:130px;
@@ -68,6 +68,7 @@ a {
        }
 .main-wrapper .Benefits > * {
         padding:5px;
+	font-size:1.5vh;
 }
 .main-wrapper .screenshots{
 	padding:2%;
@@ -81,10 +82,10 @@ a {
 .Benefits >* 
 { margin: 0 5px; } 
 .subscribe-input{
-	font-size:1em;
+	font-size:2em;
 }
 .subscribe-submit{
-	font-size:1em;
+	font-size:2em;
 }
 .screenshots > * > img {
    height:90vh;
@@ -109,8 +110,7 @@ a {
 }
 #Signup{
 grid-column:1/5;
-z-index:-1;
-grid-row:6/7;
+grid-row:7/7;
 background: linear-gradient(to top,#bbb,white); 
 text-align:left;
 display:flex;
@@ -120,7 +120,7 @@ padding:20%;
 #Info{
 }
 .comments{
-width: 300px;
+  width: 300px;
   height: 80px;
   text-align:start;
 }
