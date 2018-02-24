@@ -55,6 +55,7 @@ a {
 }
 .main-wrapper .Summarize {
 	grid-row:6/7;
+	font-size:1.5vh;
 	grid-column: 2/3;
 	padding:0.1em;
         text-align:center;
