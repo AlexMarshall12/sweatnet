@@ -31,17 +31,6 @@ ul {
 .main-wrapper .Description .signup {
 align-self: flex-end;
 }
-.main-wrapper .Description .signup > button {
-        background-color: #33C3F0;
-        margin-bottom:20px;
-        border-color: #33C3F0;
-        height: 70px;
-	width:130px;
-        cursor:pointer;
-        white-space:nowrap;
-        border-radius:10px;
-        border: 1px solid #bbb;
-}
 a {
 	text-decoration:none;
 	font-size:medium;
@@ -70,6 +59,7 @@ a {
 .main-wrapper .Benefits > * {
         padding:5px;
 	font-size:1.5vh;
+	background:#bababa;
 }
 .main-wrapper .screenshots{
 	padding:2%;
@@ -93,9 +83,8 @@ a {
 }
 
 .benefit:hover {
-  background: #bababa;
+  background: #33C3F0;
   cursor: pointer;
-
 }
 
 .screenshot{
@@ -107,21 +96,98 @@ a {
   display:block;
 }
 .benefit.active {
-  background: #bababa;
+  background: #33C3F0;
 }
-#Signup{
-grid-column:1/5;
-grid-row:7/7;
-background: linear-gradient(to top,#bbb,white); 
-text-align:left;
-display:flex;
-align-self:flex-end;
-padding:20%;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-#Info{
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
-.comments{
-  width: 300px;
-  height: 80px;
-  text-align:start;
+
+input[type="email"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 10px 25px 8px 20px;
+  cursor:pointer;
+  color: #FFF;
+  background-color: #33C3F0;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #33C3F0;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(1,1,1,0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 480px;
+  }
+
+}
 }

@@ -11,6 +11,13 @@
 	let xDown = null;
 	let yDown = null;
 	let benefits_arr;
+	window.addEventListener('resize',function(){
+		 if (window.matchMedia('(max-width: 500px)').matches) {
+			 console.log('no bigger than 500');
+                 } else {
+			 console.log('bigger than 500');
+                 }
+	});
 
 	window.addEventListener('load', function() {
 	//	document.addEventListener('touchstart',handleTouchStart,false);
@@ -119,10 +126,10 @@
 		<div class="Summarize">What gets measured gets better!</div>
 		<div class="Grey-Stripe"></div>
                 <div class="Benefits">
-                        <div id="benefit1" class="benefit" data-target="screenshot1">Save space on your phone. Store photos and videos in the Cloud
+                        <div id="benefit1" class="benefit" data-target="screenshot1">Save space on your phone. Store photos and videos in the Cloud.
                         </div>
-                        <div id="benefit2" class="benefit" data-target="screenshot2">Keep track of your progression. Get help when you're stuck</div>
-                        <div id="benefit3" class="benefit" data-target="screenshot3">Help others with their training. Share in their success</div>
+                        <div id="benefit2" class="benefit" data-target="screenshot2">Keep track of your progression. Get help when you're stuck.</div>
+                        <div id="benefit3" class="benefit" data-target="screenshot3">Help others with their training. Share in their success.</div>
 		</div>
                 <div class="screenshots">
                     <div id="screenshot1" class="screenshot" data-targeted-by="screenshot1"><img src="images/profile.png"></div>
@@ -130,16 +137,21 @@
                     <div id="screenshot3" class="screenshot" data-targeted-by="screenshot3"><img src="images/notifications.png"></div>
 		</div>
 		<div id="Signup" class="Signup">
-			<div id="Info">
-				SweatNet is under construction. Enter your email below and when it is completed, you'll be the first to know. Comments/questions are encouraged! 
-			</div>
+			<form action="/signup" method="post">
 
-			<form action="/subscribe" method="post" class="subscribe-form">
-				<input type="text" name="comments" class="comments" placeholder="Questions or Comments..."/>
-				<br>
-				<input type="text" name="email" class="email" placeholder="Email address"/>
+				<fieldset>
+					<legend>				SweatNet is under construction. Sign up below to be notified when its ready!
+					</legend>
 
-				<button type="submit" class="subscribe-submit">Signup!</button>
+					<label for="mail">Email:</label>
+					<input type="email" id="mail" name="user_email">
+
+
+					<label for="bio">Comments or Questions:</label>
+					<textarea id="bio" name="user_bio"></textarea>
+				</fieldset>
+
+				<button type="submit">Sign Up</button>
 			</form>
 		</div>
 	</div>
