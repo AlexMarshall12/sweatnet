@@ -5,7 +5,7 @@ ul {
 	list-style: none;
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:50em){
 .main-wrapper {
 	display:grid;
 	grid-template-columns: 5% 1fr 5%;

@@ -1,7 +1,8 @@
 <header>
+	 <meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-	<link href="css/landing-page-desktop.css" rel="stylesheet">
 	<link href="css/landing-page-mobile.css" rel="stylesheet">
+	<link href="css/landing-page-desktop.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </header>
@@ -11,6 +12,7 @@
 	let xDown = null;
 	let yDown = null;
 	let benefits_arr;
+	let activated = null
 	window.addEventListener('resize',function(){
 		 if (window.matchMedia('(max-width: 500px)').matches) {
 			 console.log('no bigger than 500');
@@ -48,7 +50,7 @@
 	};
 
 	function getNext(dir){
-		const index = benefits_arr.indexOf(window.activated);
+		const index = benefits_arr.indexOf(activated);
 		const to = Math.min(Math.max(parseInt(index+dir),0),2)
 		return benefits_arr[to]
 	}
@@ -82,7 +84,7 @@
 	};
 
 	function activate(targetBenefit) {
-		window.activated = targetBenefit;
+		activated = targetBenefit;
 		if (previousTimerId) clearTimeout(previousTimerId)
 
 		var activeTarget = targetBenefit.dataset.target;

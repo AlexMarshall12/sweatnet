@@ -4,7 +4,7 @@ body {
 ul {
 	list-style: none;
 }
-@media screen and (min-width:800px){
+@media screen and (min-width:50em){
 .main-wrapper .Header {
 	display: flex;
         grid-column: 2/4;
@@ -66,7 +66,7 @@ margin-bottom:5px;
 }
 .main-wrapper .Signup {
         align-self:start;
-        grid-column:2/4;
+        grid-column:1/4;
         grid-row:7/8;
 }
 .Benefits{
@@ -112,7 +112,7 @@ margin-bottom:5px;
 }
 
 form {
-  max-width: 400px;
+  max-width: 600px;
   margin: 10% auto;
   padding: 10px 20px;
   border-style:solid;
